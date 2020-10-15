@@ -6,23 +6,26 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class User {
     @Id
-    private Integer id;
+    private Long id;
     private String name;
     private String teamName;
     private Long salary;
 
-    public User(Integer id, String name, String teamName, Long salary) {
+    public User() {
+    }
+
+    public User(Long id, String name, String teamName, Long salary) {
         this.id = id;
         this.name = name;
         this.teamName = teamName;
         this.salary = salary;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

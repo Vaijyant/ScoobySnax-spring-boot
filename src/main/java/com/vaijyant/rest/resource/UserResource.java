@@ -20,6 +20,6 @@ public class UserResource {
 
     @GetMapping("/all")
     public List<User> getAll() {
-        return userRepository.findAll() ;
+        return userRepository.findAll();
     }
 }
